@@ -1,0 +1,25 @@
+#!/bin/bash
+
+TERM=alacritty
+BROWSER=brave
+DOC=libreoffice
+FILE=dolphin
+PLAYER=vlc
+GAME=steam
+PHOTO=krita
+SANDBOX=virtualbox
+DEV=neovide
+
+TAG=$(leftwm-state -q -w 0 -t $HOME/.config/leftwm/themes/current/name.liquid)
+
+case "$TAG" in 
+  1) $TERM &> /dev/null ;;
+  2) $BROWSER &> /dev/null ;;
+  3) $DOC &> /dev/null ;;
+  4) $FILE &> /dev/null ;;
+  5) $PLAYER &> /dev/null ;;
+  6) $GAME &> /dev/null ;;
+  7) $PHOTO &> /dev/null ;;
+  8) $SANDBOX &> /dev/null ;;
+  9) $DEV &> /dev/null ;;
+esac

@@ -1,0 +1,5 @@
+{% for tag in workspace.tags %}
+{% if tag.mine %}
+{{tag.name}}
+{% endif %}
+{% endfor %}
