@@ -13,9 +13,9 @@ launcher    : Rofi
 ## Screenshot
 
 ![Desktop](./images/desktop1.png)
-![Desktop](./images/sysmenu.png)
+![Desktop](./images/tile.png)
 ![Desktop](./images/app_menu.png)
-![Desktop](./images/list_menu.png)
+![Desktop](./images/dolphin.png)
 
 ## Dependencies
 
