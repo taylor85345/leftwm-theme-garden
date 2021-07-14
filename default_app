@@ -1,16 +1,21 @@
 #!/bin/bash
+if test -e "$HOME"/.config/leftwm/default_apps.sh;
+then
+  source $HOME/.config/leftwm/default_apps.sh;
+else
+  export TERM=alacritty
+  export BROWSER=firefox
+  export DOC=libreoffice
+  export FILE=dolphin
+  export PLAYER=vlc
+  export GAME=steam
+  export PHOTO=gimp
+  export SANDBOX=virtualbox
+  export DEV="alacritty -e vim";
+fi
 
-TERM=alacritty
-BROWSER=brave
-DOC=libreoffice
-FILE=dolphin
-PLAYER=vlc
-GAME=steam
-PHOTO=krita
-SANDBOX=virtualbox
-DEV=neovide
 
-TAG=$(leftwm-state -q -w 0 -t $HOME/.config/leftwm/themes/current/name.liquid)
+TAG=$(leftwm-state -q -w 0 -t "$HOME"/.config/leftwm/themes/current/name.liquid)
 
 case "$TAG" in 
   1) $TERM &> /dev/null ;;
