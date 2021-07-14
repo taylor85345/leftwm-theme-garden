@@ -38,7 +38,7 @@ git clone https://github.com/taylor85345/leftwm-theme-garden.git
 3. Make a copy of this project in your themes folder
 
 ```BASH
-cp -r ./leftwm-theme-dracula-rounded ~/.config/leftwm/themes
+cp -r ./leftwm-theme-garden ~/.config/leftwm/themes
 ```
 
 4. Remove the symlink to your current theme if set
