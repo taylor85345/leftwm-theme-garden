@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPTPATH="$( cd "$(dirname "$0")" || exit ; pwd -P )"
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 autorandr -c
 
 # Down the last running theme
@@ -30,10 +30,10 @@ nm-applet &
 xss-lock slock &
 
 index=0
-monitors=("$(polybar -m | sed s/:.*//)")
+monitors=($(polybar -m | sed s/:.*//))
 leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
   barname="mainbar$index"
-  monitor=${monitors[index]} width=$(( width - 16 )) sleep 1 && polybar -c "$SCRIPTPATH"/configs/polybar.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/configs/polybar.config $barname &> /dev/null &
   let index=index+1
 done
