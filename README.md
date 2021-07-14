@@ -25,7 +25,16 @@ launcher    : Rofi
 - [nerd-fonts-inter](https://github.com/rsms/inter)
 - [rofi](https://github.com/davatorium/rofi)
 
-## Installation
+## Installation via [leftwm-theme](https://github.com/leftwm/leftwm-theme)
+
+If you have `leftwm-theme` installed, you can install this theme directly within LeftWM using the following commands:
+
+```BASH
+leftwm-theme update
+leftwm-theme install Garden
+```
+
+## Manual Installation
 
 1. Install all required dependencies
 
