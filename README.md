@@ -60,11 +60,8 @@ $MOD + Shift + r
 
 ## Configuration
 
-There are two launchers that can be used, list and touch. You can switch between these by linking either to the file launcher.rasi e.g.:
-```BASH
-ln -s list_launcher.rasi launcher.rasi
-```
+Coming Soon!
 
 ## Credits
 
-This theme is heavily based on the Linear theme for AwesomeWM by manilarome(https://github.com/manilarome/the-glorious-dotfiles), and I have borrowed several configs and scripts from that theme. The base LeftWM configs were modified from the Dracula Rounded theme by AethanFoot (https://github.com/AethanFoot/leftwm-theme-dracula-rounded)
+This theme is heavily based on the Linear theme for AwesomeWM by manilarome(https://github.com/manilarome/the-glorious-dotfiles), and I have borrowed several configs and scripts from that theme. The base LeftWM configs were modified from the Dracula Rounded theme by AethanFoot (https://github.com/AethanFoot/leftwm-theme-dracula-rounded). I've still got some mismatched Dracula configs hanging around, and I'll be removing/updating those in the near future.
