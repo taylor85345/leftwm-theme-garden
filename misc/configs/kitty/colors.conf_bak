@@ -1,0 +1,43 @@
+background	#1A2026
+foreground	#FFFFFF
+cursorColor	#FFFFFF
+color0	#242D35
+color1	#FB6396
+color2	#94CF95
+color3	#F692B2
+color4	#6EC1D6
+color5	#CD84C8
+color6	#7FE4D2
+color7	#FFFFFF
+color8	#526170
+color9	#F92D72
+color10	#6CCB6E
+color11	#F26190
+color12	#4CB9D6
+color13	#C269BC
+color14	#58D6BF
+color15	#F4F5F2
+
+# The foreground for selections
+selection_foreground #BD99FF
+# The background for selections
+selection_background #3D4C5F
+
+# Emacs terminal background
+color17    #323F4E
+# Emacs terminal modeline
+color23    #3D4C5F
+
+# The color for the border of the active window
+active_border_color #F1FA8C
+
+# The color for the border of inactive windows
+inactive_border_color #56687E
+   
+url_color #6498EF
+
+active_tab_foreground #F8F8F2
+active_tab_background #24D1E7
+inactive_tab_foreground #F8F8F2
+inactive_tab_background #3D4C5F
+
