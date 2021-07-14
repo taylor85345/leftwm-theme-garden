@@ -102,6 +102,9 @@ $MOD + Shift + r
     ```BASH
     macchina -UbpS --custom-ascii ~/.config/leftwm/themes/current/misc/leaf.ascii --color blue --custom-ascii-color green
     ```
+  + **Systray**
+    
+    If you find that the systray module "^" runs a little slow, there is an alternate option that requires `trayer` as a dependency. Just got to the `[module/systray]` section of `configs/polybar.config` in the theme folder and comment out the `click-left` and`click-right` lines, then uncomment the matching lines with the trayer command.
 
 ## Credits
 
