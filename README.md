@@ -29,16 +29,16 @@ launcher    : Rofi
 
 1. Install all required dependencies
 
-2. Clone the repository
+2. cd into your Themes directory
 
 ```BASH
-git clone https://github.com/taylor85345/leftwm-theme-garden.git $HOME/.config/leftwm/themes/Garden
+cd $HOME/.config/leftwm/themes
 ```
 
-3. Make a copy of this project in your themes folder
+3. Clone the repository
 
 ```BASH
-cp -r ./leftwm-theme-garden ~/.config/leftwm/themes
+git clone https://github.com/taylor85345/leftwm-theme-garden.git Garden
 ```
 
 4. Remove the symlink to your current theme if set
