@@ -44,12 +44,12 @@ git clone https://github.com/taylor85345/leftwm-theme-garden.git Garden
 4. Remove the symlink to your current theme if set
 
 ```BASH
-rm ~/.config/leftwm/themes/current
+rm current
 ```
 5. Set this as your current theme
 
 ```BASH
-ln -s ~/.config/leftwm/themes/leftwm-theme-garden ~/.config/leftwm/themes/current
+ln -s Garden current
 ```
 
 6. Restart your window manager
