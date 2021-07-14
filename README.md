@@ -32,7 +32,7 @@ launcher    : Rofi
 2. Clone the repository
 
 ```BASH
-git clone https://github.com/taylor85345/leftwm-theme-garden.git
+git clone https://github.com/taylor85345/leftwm-theme-garden.git $HOME/.config/leftwm/themes/Garden
 ```
 
 3. Make a copy of this project in your themes folder
