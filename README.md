@@ -3,7 +3,7 @@
 ## Packages
 
 ```
-DE          : Arch
+DE          : Manjaro
 WM          : Leftwm
 terminal    : Alacritty
 bar         : Polybar
@@ -20,9 +20,9 @@ launcher    : Rofi
 ## Dependencies
 
 - [leftwm-git](https://github.com/leftwm/leftwm)
-- [jonaburg picom](https://github.com/jonaburg/picom)
+- [picom-jonaburg-git](https://github.com/jonaburg/picom)
 - [polybar](https://github.com/polybar/polybar)
-- [inter nerd font](https://github.com/rsms/inter)
+- [nerd-fonts-inter](https://github.com/rsms/inter)
 - [rofi](https://github.com/davatorium/rofi)
 
 ## Installation
