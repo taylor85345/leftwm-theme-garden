@@ -59,7 +59,7 @@ $MOD + Shift + r
 ```
 
 ## Configuration
-  + default apps script
+  + **Default Apps script**
     
     I've included the default_app script (assigned to the '+' in polybar) which assigns a program to each tag and opens whichever application is assigned to the currently focused tag. You can edit the script, or you can copy 'misc/default_apps.sh' to '$HOME/.config/leftwm' and edit that file if you want your selections to survive leftwm-theme updates.
   
@@ -77,7 +77,7 @@ $MOD + Shift + r
     DEV="alacritty -e vim";
     ```
 
-  + Application Theming
+  + **Application Theming**
     
     For consistency, I use the following themes in GTK and QT apps:
     
@@ -86,7 +86,7 @@ $MOD + Shift + r
 
     I highly recommend using QT5 applications with this theme, particularly those made for the KDE desktop environment, and applying the Inverse-dark theme via 'qt5ct' and 'kvantum-manager'.
   
-  + Fetch Script
+  + **Fetch Script**
     
     If for some reason you want to use my fetch script, you will need to install [Macchina](https://github.com/Macchina-CLI/macchina) and add the following to your .bashrc:
 
