@@ -3,7 +3,7 @@
 ## Packages
 
 ```
-DE          : Arch
+DE          : Manjaro
 WM          : Leftwm
 terminal    : Alacritty
 bar         : Polybar
@@ -20,12 +20,21 @@ launcher    : Rofi
 ## Dependencies
 
 - [leftwm-git](https://github.com/leftwm/leftwm)
-- [jonaburg picom](https://github.com/jonaburg/picom)
+- [picom-jonaburg-git](https://github.com/jonaburg/picom)
 - [polybar](https://github.com/polybar/polybar)
-- [inter nerd font](https://github.com/rsms/inter)
+- [nerd-fonts-inter](https://github.com/rsms/inter)
 - [rofi](https://github.com/davatorium/rofi)
 
-## Installation
+## Installation via [leftwm-theme](https://github.com/leftwm/leftwm-theme)
+
+If you have `leftwm-theme` installed, you can install this theme directly within LeftWM using the following commands:
+
+```BASH
+leftwm-theme update
+leftwm-theme install Garden
+```
+
+## Manual Installation
 
 1. Install all required dependencies
 
@@ -44,12 +53,12 @@ git clone https://github.com/taylor85345/leftwm-theme-garden.git Garden
 4. Remove the symlink to your current theme if set
 
 ```BASH
-rm ~/.config/leftwm/themes/current
+rm current
 ```
 5. Set this as your current theme
 
 ```BASH
-ln -s ~/.config/leftwm/themes/leftwm-theme-garden ~/.config/leftwm/themes/current
+ln -s Garden current
 ```
 
 6. Restart your window manager
@@ -61,7 +70,7 @@ $MOD + Shift + r
 ## Configuration
   + **Default Apps script**
     
-    I've included the default_app script (assigned to the '+' in polybar) which assigns a program to each tag and opens whichever application is assigned to the currently focused tag. You can edit the script, or you can copy 'misc/default_apps.sh' to '$HOME/.config/leftwm' and edit that file if you want your selections to survive leftwm-theme updates.
+    I've included the default_app script (assigned to the '+' in polybar) which assigns a program to each tag and opens whichever application is assigned to the currently focused tag. You can edit the script, or you can copy `misc/default_apps.sh` to `$HOME/.config/leftwm` and edit that file if you want your selections to survive leftwm-theme updates.
   
     By default, the script will launch the following
 
@@ -84,7 +93,7 @@ $MOD + Shift + r
     - QT5/Kvantum: [Inverse-dark](https://github.com/yeyushengfan258/Inverse-dark-kde)
     - GTK: [gtk-theme-breath](https://github.com/manjaro/artwork-breath-gtk)
 
-    I highly recommend using QT5 applications with this theme, particularly those made for the KDE desktop environment, and applying the Inverse-dark theme via 'qt5ct' and 'kvantum-manager'.
+    I highly recommend using QT5 applications with this theme, particularly those made for the KDE desktop environment, and applying the Inverse-dark theme via `qt5ct` and `kvantum-manager`.
   
   + **Fetch Script**
     
@@ -93,6 +102,9 @@ $MOD + Shift + r
     ```BASH
     macchina -UbpS --custom-ascii ~/.config/leftwm/themes/current/misc/leaf.ascii --color blue --custom-ascii-color green
     ```
+  + **Systray**
+    
+    If you find that the systray module "^" runs a little slow, there is an alternate option that requires `trayer` as a dependency. Just got to the `[module/systray]` section of `configs/polybar.config` in the theme folder and comment out the `click-left` and`click-right` lines, then uncomment the matching lines with the trayer command.
 
 ## Credits
 
