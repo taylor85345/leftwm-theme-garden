@@ -9,9 +9,9 @@ configuration {
 * {
     font: "Inter Nerd Font Semibold 11";
     foreground:                 #f8f8f2;
-    background-color:           #00000040;
-    selected-foreground:        #f48fb1;
-    selected-background:        #b2b2b250;
+    background-color:           #00000066;
+    selected-foreground:        #53E2AE;
+    selected-background:        #56687E50;
     separatorcolor:             #ff79c6;
     bordercolor:                #ff79c6;
     highlightcolor:             #8be9fd;

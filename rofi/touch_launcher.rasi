@@ -1,90 +1,150 @@
 configuration {
-    modi:                           "drun";
-    display-drun:                   "Applications";
-    show-icons:                     true;
-    disable-history:                false;
-    fullscreen:                     false;
-	hide-scrollbar: 				true;
-	sidebar-mode: 					false;
-    matching:            "fuzzy";
+	font: "Inter Regular 12";
+	show-icons: true;
+	drun-display-format: "{name}";
+  drun-match-fields: "name,generic,categories,keywords";
+	fullscreen: false;
+	threads: 0;
+	matching: "fuzzy";
+  sorting-method: "fzf";
+	scroll-method: 0;
+	disable-history: false;
+	fullscreen: true;
+	window-thumbnail: true;
 }
 
 * {
-    font: "SauceCodePro Nerd Font Semibold 11";
-    foreground:                 #f8f8f2;
-    background-color:           #282a36b3;
-    selected-foreground:        #bd93f9;
-    selected-background:        #b2b2b250;
-    separatorcolor:             #ff79c6;
-    bordercolor:                #ff79c6;
-    highlightcolor:             #8be9fd;
-    transparent:                #00000000;
+	transparent: #00000000;
+	foreground: #F2F2F2EE;
+	background-selected: #F2F2F245;
+	background-active: #F2F2F230;
+	background-white: #F2F2F211;
+	background-black: #00000066;
+	urgent: #E91E6366;
+	urgent-selected: #E91E6377;
 }
 
-#window {
-    background-color:               @background;
-    text-color:                     @foreground;
-	border:							0;
-	border-color:					@background;
-    border-radius:                  8;
-	width:							600px;
-    location:                       northwest;
-    x-offset:                       8;
-    y-offset:                       40;
+window {
+	transparency: "real";
+	background-color: @transparent;
+	text-color: @foreground;
+	location: northwest;
+	anchor: northwest;
 }
 
-#prompt {
-	background-color: 				@transparent;
-	text-color: 					@foreground;
+prompt {
+	enabled: false;
 }
 
-#entry {
-    background-color:               @transparent;
-    text-color:                     @foreground;
-    font:                           "SauceCodePro Nerd Font Semibold 13";
-    expand:                         true;
+button {
+	action: "ok";
+	str: " ";
+	font: "FantasqueSansMono Nerd Font 11";
+	expand: false;
+	text-color: @foreground;
+	background-color: @transparent;
+	vertical-align: 0.7;
+	horizontal-align: 0.5;
 }
 
-#inputbar {
-	children: 						[ entry ];
-    padding:                        15px;
-	background-color: 				@transparent;
+entry {
+	font: "Inter Regular 11";
+	background-color: @transparent;
+	text-color: @foreground;
+	expand: true;
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
+	placeholder: "Type to search";
+	placeholder-color: @foreground;
+	blink: true;
 }
 
-#listview {
-    background-color:               @transparent;
-    padding:                        0px;
-    columns:                        5;
-    lines:                          3;
-    spacing:                        0px;
-    cycle:                          true;
-    dynamic:                        true;
-    layout:                         vertical;
+case-indicator {
+	background-color: @transparent;
+	text-color: @foreground;
+	vertical-align: 0.5;
+	horizontal-align: 0.5;
 }
 
-#element {
-    background-color:               @transparent;
-    text-color:                     @foreground;
-    orientation:                    vertical;
-    border-radius:                  8;
-    padding:                        20px 15px;
+entry-wrapper {
+	orientation: horizontal;
+	vertical-align: 0.5;
+	spacing: 4px;
+	background-color: @transparent;
+	children: [ button, entry, case-indicator ];
 }
 
-#element-icon {
-    size:                           64px;
-    border:                         0px;
+inputbar {
+	background-color: @background-white;
+	text-color: @foreground;
+	expand: false;
+	border-radius: 6px;
+	margin: 0px calc((100% - 510px) / 2) 0px calc((100% - 510px) / 2);
+	padding: 10px 10px 10px 10px;
+	position: north;
+	children: [ entry-wrapper ];
 }
 
-#element-text {
-    expand:                         false;
-    width:                          64px;
-    horizontal-align:               0.6;
-    highlight:                      None #8be9fd; 
+listview {
+	background-color: @transparent;
+	columns: 7;
+	spacing: 5px;
+	cycle: false;
+	dynamic: true;
+	layout: vertical;
 }
 
-#element.selected {
-    background-color:               @selected-background;
-    text-color:                     @selected-foreground;
-	border:							0;
-    border-radius:                  8;
+mainbox {
+	background-color: @background-black;
+	children: [ inputbar, listview ];
+	spacing: 25px;
+	padding: 70px 135px 0 135px;
+}
+
+element {
+	background-color: @transparent;
+	text-color: @foreground;
+	orientation: vertical;
+	border-radius: 12px;
+	padding: 25px 0 25px 0;
+}
+
+element-icon {
+	size: 72px;
+	border: 0;
+}
+
+element-text {
+	expand: true;
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+	margin: 0 10px 0 10px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+	background-color: @urgent;
+	text-color: @foreground;
+	border-radius: 9px;
+}
+
+element normal.active,
+element alternate.active {
+	background-color: @background-active;
+	text-color: @foreground;
+}
+
+element selected {
+	background-color: @background-selected;
+	text-color: @foreground;
+}
+
+element selected.urgent {
+	background-color: @urgent-selected;
+	text-color: @foreground;
+}
+
+element selected.active {
+	background-color: @background-active;
+	color: @foreground-selected;
 }
