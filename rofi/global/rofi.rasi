@@ -15,7 +15,7 @@ configuration {
     background-selected: #F2F2F245;
     background-active: #F2F2F230;
     background-white: #F2F2F211;
-    background-black: #00000040;
+    background-black: #00000066;
     urgent: #E91E6366;
     urgent-selected: #E91E6377;
 }
