@@ -8,6 +8,7 @@ WM          : Leftwm
 terminal    : Alacritty
 bar         : Polybar
 launcher    : Rofi
+file manager: Dolphin
 ```
 
 ## Screenshot
@@ -24,6 +25,8 @@ launcher    : Rofi
 - [polybar](https://github.com/polybar/polybar)
 - [nerd-fonts-inter](https://github.com/rsms/inter)
 - [rofi](https://github.com/davatorium/rofi)
+- [dunst](https://github.com/dunst-project/dunst) (Optional for Notifications)
+- [trayer](https://github.com/sargon/trayer-srg) (Optional, see Systray Configuration section)
 
 ## Installation via [leftwm-theme](https://github.com/leftwm/leftwm-theme)
 
