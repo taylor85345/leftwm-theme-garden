@@ -27,6 +27,7 @@ file manager: Dolphin
 - [rofi](https://github.com/davatorium/rofi)
 - [dunst](https://github.com/dunst-project/dunst) (Optional for Notifications)
 - [trayer](https://github.com/sargon/trayer-srg) (Optional, see Systray Configuration section)
+- [feh](https://feh.finalrewind.org/)
 
 ## Installation via [leftwm-theme](https://github.com/leftwm/leftwm-theme)
 
