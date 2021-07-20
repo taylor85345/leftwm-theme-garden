@@ -36,6 +36,7 @@ If you have `leftwm-theme` installed, you can install this theme directly within
 ```BASH
 leftwm-theme update
 leftwm-theme install Garden
+leftwm-theme apply Garden
 ```
 
 ## Manual Installation
