@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 autorandr -c
 
 # Down the last running theme
