@@ -20,7 +20,7 @@ else
 fi
 
 #Lookup Focused tag
-TAG=$(leftwm-state -q -w 0 -t "$HOME"/.config/leftwm/themes/current/name.liquid)
+TAG=$(leftwm-state -q -w 0 -t "$HOME"/.config/leftwm/themes/current/liquid/name.liquid)
 
 #Executes application based on number of focused tag
 case "$TAG" in 

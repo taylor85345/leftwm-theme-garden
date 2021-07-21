@@ -11,7 +11,7 @@ ln -s "$SCRIPTPATH"/down /tmp/leftwm-theme-down
 
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
-  picom --experimental-backends --config "$SCRIPTPATH"/configs/picom.conf &> /dev/null &
+  picom --experimental-backends --config "$SCRIPTPATH"/picom/picom.conf &> /dev/null &
 elif [ -x "$(command -v compton)" ]; then
   compton &> /dev/null &
 fi
@@ -24,16 +24,20 @@ if [ -x "$(command -v feh)" ]; then
   feh --bg-fill "$SCRIPTPATH"/background.jpg
 fi
 
-dunst -conf "$SCRIPTPATH"/configs/dunstrc &
+#Applications to run at startup
+dunst -conf "$SCRIPTPATH"/dunst/dunstrc &
 blueman-applet &
 nm-applet &
 xss-lock slock &
+lxqt-policykit-agent &
+xfce4-power-manager &
 
+#Start Polybar
 index=0
 monitors=($(polybar -m | sed s/:.*//))
-leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
+leftwm-state -q -n -t "$SCRIPTPATH"/liquid/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
   barname="mainbar$index"
-  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/configs/polybar.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybar.config $barname &> /dev/null &
   let index=index+1
 done
