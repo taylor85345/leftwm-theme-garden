@@ -1,13 +1,20 @@
-#My config.toml, provided for your reference. 
-#Note the Rofi and default_app script keybinds.
-#Any key starting with `XF86XK` is for mapping function keys such as volume or brightness control.
-
-focus_behaviour = "ClickTo" # Can be Sloppy, ClickTo, or Driven
+focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 
 modkey = "Mod4"
 workspaces = []
-tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+#tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+tags = ["", "", "", "", "輸", "", "", "ﮕ", ""]
+
+[[scratchpad]]
+name = "Kitty"
+value = "kitty"
+
+[[keybind]]
+command = "ToggleScratchPad"
+value = "Kitty"
+modifier = ["modkey"]
+key = "grave"
 
 [[keybind]]
 command = "Execute"
@@ -289,3 +296,15 @@ command = "Execute"
 value = "screenshot.sh -s"
 modifier = ["modkey", "Shift"]
 key = "s"
+
+[[keybind]]
+command = "Execute"
+value = "rofi_mpvtube"
+modifier = ["modkey"]
+key = "y"
+
+[[keybind]]
+command = "Execute"
+value = "networkmanager_dmenu"
+modifier = ["modkey"]
+key = "n"

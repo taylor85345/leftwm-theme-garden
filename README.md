@@ -73,11 +73,14 @@ $MOD + Shift + r
 ```
 
 ## Configuration
+
+  + Tag Bar
+    
+    The Tag Switcher in Polybar assigns icons based on your tag names as defined in your `$HOME/.config/leftwm/config.toml`. To match the icons in my screenshots, please copy the `tags =` line out of `misc/configs/leftwm/config.toml` into your config.toml
+
   + **Default Apps script**
     
     I've included the default_app script (assigned to the '+' in polybar) which assigns a program to each tag and opens whichever application is assigned to the currently focused tag. You can edit the script, or you can copy `misc/default_apps.sh` to `$HOME/.config/leftwm` and edit that file if you want your selections to survive leftwm-theme updates.
-    
-    Note: this script assumes that your config.toml defines `tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]`. This should be the default configuration in LeftWM.
   
     By default, the script will launch the following
 
