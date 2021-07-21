@@ -33,7 +33,7 @@ lxqt-policykit-agent &
 xfce4-power-manager &
 
 #Start Polybar
-index=0
+export index=0
 monitors=($(polybar -m | sed s/:.*//))
 leftwm-state -q -n -t "$SCRIPTPATH"/liquid/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
