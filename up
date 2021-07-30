@@ -21,14 +21,14 @@ echo "LoadTheme $SCRIPTPATH/theme.toml" > "$XDG_RUNTIME_DIR"/leftwm/commands.pip
 
 # Set background
 if [ -x "$(command -v feh)" ]; then
-  feh --bg-fill "$SCRIPTPATH"/background.jpg
+  feh --no-fehbg --bg-fill "$SCRIPTPATH"/background.jpg
 fi
 
-#Applications to run at startup
+#Applications to 2run at startup
+eww daemon
 dunst -conf "$SCRIPTPATH"/dunst/dunstrc &
 blueman-applet &
 nm-applet &
-xss-lock slock &
 lxqt-policykit-agent &
 xfce4-power-manager &
 
