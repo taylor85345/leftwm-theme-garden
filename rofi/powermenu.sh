@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-THEME="$HOME/.config/leftwm/themes/current/rofi/powermenu.rasi"
+THEME="$HOME/.config/bspwm/rofi/powermenu.rasi"
 
 rofi_command="rofi -no-config -theme $THEME"
 
@@ -17,22 +17,18 @@ options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
-        systemctl poweroff
+      systemctl poweroff
         ;;
     $reboot)
-		systemctl reboot
+		  systemctl reboot
         ;;
     $lock)
-		if [[ -f /usr/bin/i3lock ]]; then
-			i3lock
-		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
-		fi
         ;;
     $suspend)
-		systemctl suspend
+		  systemctl suspend
         ;;
     $logout)
-        $HOME/.config/leftwm/themes/current/down && pkill leftwm
+      bspc quit
         ;;
 esac

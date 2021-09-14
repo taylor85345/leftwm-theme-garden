@@ -1,5 +1,5 @@
 configuration {
-    font: "Inter Regular 10";
+    font: "Inter Nerd Font Regular 10";
     sidebar-mode: true;
     show-icons: true;
     sorting-method: "fzf";
@@ -120,10 +120,13 @@ element-icon {
     size: 24px;
     border: 0;
     border-color: @transparent;
+    background-color: @transparent;
 }
 
 element-text {
     font: "Inter Regular 11";
+    background-color: @transparent;
+    text-color:       inherit;
     expand: true;
     horizontal-align: 0;
     vertical-align: 0.5;
@@ -156,3 +159,4 @@ element selected.active {
     background-color: @background-active;
     color: @foreground-selected;
 }
+

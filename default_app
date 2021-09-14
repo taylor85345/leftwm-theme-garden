@@ -15,7 +15,7 @@ else
   export PLAYER=vlc
   export GAME=steam
   export PHOTO=gimp
-  export SANDBOX=virtualbox
+  export SANDBOX=
   export DEV="alacritty -e vim";
 fi
 

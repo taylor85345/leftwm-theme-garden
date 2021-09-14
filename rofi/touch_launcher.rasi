@@ -1,15 +1,13 @@
 configuration {
-	font: "Inter Regular 12";
+	font: "Inter Nerd Font 12";
 	show-icons: true;
 	drun-display-format: "{name}";
   drun-match-fields: "name,generic,categories,keywords";
-	fullscreen: false;
 	threads: 0;
 	matching: "fuzzy";
   sorting-method: "fzf";
 	scroll-method: 0;
 	disable-history: false;
-	fullscreen: true;
 	window-thumbnail: true;
 }
 
@@ -30,6 +28,7 @@ window {
 	text-color: @foreground;
 	location: northwest;
 	anchor: northwest;
+	fullscreen: true;
 }
 
 prompt {
@@ -39,7 +38,7 @@ prompt {
 button {
 	action: "ok";
 	str: " ";
-	font: "FantasqueSansMono Nerd Font 11";
+	font: "Inter Nerd Font 11";
 	expand: false;
 	text-color: @foreground;
 	background-color: @transparent;
@@ -110,11 +109,16 @@ element {
 }
 
 element-icon {
+	background-color: @transparent;
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
 	size: 72px;
 	border: 0;
 }
 
 element-text {
+	background-color: @transparent;
+	text-color: @foreground;
 	expand: true;
 	horizontal-align: 0.5;
 	vertical-align: 0.5;
