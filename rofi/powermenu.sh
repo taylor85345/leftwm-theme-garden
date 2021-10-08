@@ -29,6 +29,6 @@ case $chosen in
 		  systemctl suspend
         ;;
     $logout)
-      bspc quit
+      $HOME/.config/leftwm/themes/current/down && pkill leftwm
         ;;
 esac
