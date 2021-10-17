@@ -110,8 +110,8 @@ $MOD + Shift + r
     If for some reason you want to use my fetch script, you will need to install [Macchina](https://github.com/Macchina-CLI/macchina) and add the following to your .bashrc:
 
     ```BASH
-    macchina -UbpS --custom-ascii ~/.config/leftwm/themes/current/misc/leaf.ascii --color blue --custom-ascii-color green
-    ```
+    macchina -UbS --custom-ascii ~/.config/leftwm/themes/current/misc/leaf.ascii --color blue --custom-ascii-color green --palette light 
+   ```
   + **Systray**
     
     If you find that the systray module "^" runs a little slow, there is an alternate option that requires `trayer` as a dependency. Just got to the `[module/systray]` section of `configs/polybar.config` in the theme folder and comment out the `click-left` and `click-right` lines, then uncomment the matching lines with the trayer command.
