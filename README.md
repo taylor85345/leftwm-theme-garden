@@ -111,8 +111,8 @@ $MOD + Shift + r
 
     ```BASH
     macchina -UbS --custom-ascii ~/.config/leftwm/themes/current/misc/leaf.ascii --color blue --custom-ascii-color green --palette light 
-   ```
-  + **Systray**
+   
+ + **Systray**
     
     If you find that the systray module "^" runs a little slow, there is an alternate option that requires `trayer` as a dependency. Just got to the `[module/systray]` section of `configs/polybar.config` in the theme folder and comment out the `click-left` and `click-right` lines, then uncomment the matching lines with the trayer command.
  
@@ -124,4 +124,3 @@ $MOD + Shift + r
 This theme is heavily based on the Linear theme for AwesomeWM by manilarome(https://github.com/manilarome/the-glorious-dotfiles), and I have borrowed several configs and scripts from that theme. The base LeftWM configs were modified from the Dracula Rounded theme by AethanFoot (https://github.com/AethanFoot/leftwm-theme-dracula-rounded). I've still got some mismatched Dracula configs hanging around, and I'll be removing/updating those in the near future.
 
 *All provided wallpapers are clips taken from the film Garden of Words (2013) and are legally property of the owners of that film. I believe that my inclusion of these images constitutes Fair Use, but I am not an expert on copyright law and will gladly comply with any requests for the removal of these images.
-
