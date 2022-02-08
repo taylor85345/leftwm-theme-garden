@@ -18,7 +18,6 @@ elif [ -x "$(command -v compton)" ]; then
 fi
 
 # Set the theme.toml config
-#echo "LoadTheme $SCRIPTPATH/theme.toml" > "$XDG_RUNTIME_DIR"/leftwm/commands.pipe
 leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
 
 # Set background
