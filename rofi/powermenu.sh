@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-THEME="$HOME/.config/bspwm/rofi/powermenu.rasi"
+THEME="$HOME/.config/leftwm/themes/current/rofi/powermenu.rasi"
 
 rofi_command="rofi -no-config -theme $THEME"
 
