@@ -1,14 +1,36 @@
-focus_behaviour = "Sloppy" # Can be Sloppy, ClickTo, or Driven
+focus_behaviour = "ClickTo" # Can be Sloppy, ClickTo, or Driven
 focus_new_windows = true
 
 modkey = "Mod4"
 workspaces = []
-#tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-tags = ["", "", "", "", "輸", "", "", "ﮕ", ""]
+tags = ["", "", "", "", "輸", "", "", "", ""]
+
+window_rules = [
+  {window_class = "Brave-browser", spawn_on_tag = 2},
+  {window_class = "gimp-2.10", spawn_on_tag = 7},
+  {window_class = "krita", spawn_on_tag = 7},
+  {window_class = "inkstitch", spawn_floating = true},
+  {window_class = "inkstitch-gui", spawn_floating = true},
+  {window_class = "kcalc", spawn_floating = true},
+  {window_class = "plexamp", spawn_floating = true},
+  {window_title = "Plexamp", spawn_floating = true},
+  {window_class = "ibabycare.exe", spawn_floating = true},
+  {window_class = "Alacritty", spawn_floating = true},
+  {window_class = "xivlauncher.exe", spawn_on_tag = 6, spawn_floating = true},
+  {window_class = "lutris", spawn_on_tag = 6},
+]
 
 [[scratchpad]]
 name = "Kitty"
 value = "kitty"
+
+[[scratchpad]]
+name = "pavucontrol"
+value = "pavucontrol"
+
+[[scratchpad]]
+name = "dolphin"
+value = "dolphin"
 
 [[keybind]]
 command = "ToggleScratchPad"
@@ -17,14 +39,50 @@ modifier = ["modkey"]
 key = "grave"
 
 [[keybind]]
+command = "ToggleScratchPad"
+value = "pavucontrol"
+modifier = ["modkey", "Shift"]
+key = "v"
+
+[[keybind]]
+command = "ToggleScratchPad"
+value = "dolphin"
+modifier = ["modkey"]
+key = "c"
+
+[[keybind]]
 command = "Execute"
-value = "rofi -no-config -no-lazy-grab -show drun -theme $HOME/.config/leftwm/themes/current/rofi/launcher.rasi"
+value = "bwmenu -- -no-default-config"
+modifier = ["modkey"]
+key = "p"
+
+[[keybind]]
+command = "Execute"
+value = "$HOME/pss_convert/pss-convert-dmenu ~/Documents/PSS Pricing/"
+modifier = ["modkey", "Control"]
+key = "p"
+
+[[keybind]]
+command = "Execute"
+value = "rofi -no-default-config -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
+modifier = ["modkey"]
+key = "v"
+
+[[keybind]]
+command = "Execute"
+value = "QT_QPA_PLATFORMTHEME=qt5ct rofi -no-config -no-lazy-grab -show drun -theme $HOME/.config/leftwm/themes/current/rofi/launcher.rasi"
 modifier = ["modkey"]
 key = "d"
 
 [[keybind]]
 command = "Execute"
-value = "$BROWSER"
+value = "rofi -show 'Global Search' -modi 'Global Search':$HOME/.config/bspwm/rofi/global/rofi-spotlight.sh -theme $HOME/.config/bspwm/rofi/global/rofi.rasi"
+modifier = ["modkey"]
+key = "space"
+
+[[keybind]]
+command = "Execute"
+value = "leftwm-command 'SendWorkspaceToTag 0 1' && $BROWSER"
 modifier = ["modkey", "Shift"]
 key = "b"
 
@@ -66,6 +124,11 @@ key = "l"
 command = "ToggleFullScreen"
 modifier = ["modkey"]
 key = "f"
+
+[[keybind]]
+command = "ToggleFloating"
+modifier = ["modkey"]
+key = "t"
 
 [[keybind]]
 command = "MoveToLastWorkspace"
@@ -305,6 +368,30 @@ key = "y"
 
 [[keybind]]
 command = "Execute"
-value = "networkmanager_dmenu"
+value = "networkmanager_dmenu -no-default-config"
 modifier = ["modkey"]
 key = "n"
+
+[[keybind]]
+command = "Execute"
+value = "pkill noafk || noafk"
+modifier = ["modkey", "Shift"]
+key = "grave"
+
+[[keybind]]
+command = "Execute"
+value = "kitty -e ncmpcpp"
+modifier = ["modkey"]
+key = "F2"
+
+[[keybind]]
+command = "Execute"
+value = "dm-radio"
+modifier = ["modkey", "Shift"]
+key = "F2"
+
+[[keybind]]
+command = "Execute"
+value = "eww state | grep : && eww close-all || eww open-many weather_side time_side smol_calendar player_side sliders_side"
+modifier = ["modkey"]
+key = "z"

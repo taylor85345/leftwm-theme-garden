@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export QT_QPA_PLATFORMTHEME="qt5ct"
+
 ##This script assigns a default application to each Tag (1-9), and opens the application assigned to the currently focused tag when run.
 ##Please copy misc/default_apps.sh to your root leftwm config folder ($HOME/.config/leftwm) and configure your preferred defaults there.
 
