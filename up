@@ -19,7 +19,7 @@ elif [ -x "$(command -v compton)" ]; then
 fi
 
 # Set the theme.toml config
-leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
+leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 
 # Set background
 if [ -x "$(command -v feh)" ]; then
@@ -27,12 +27,14 @@ if [ -x "$(command -v feh)" ]; then
 fi
 
 #Applications to 2run at startup
-eww daemon
+#eww daemon 
+emacs --daemon &
 dunst -conf "$SCRIPTPATH"/dunst/dunstrc &
 blueman-applet &
 nm-applet &
 lxqt-policykit-agent &
 xfce4-power-manager &
+numlockx on 
 
 #Start Polybar
 export index=0
